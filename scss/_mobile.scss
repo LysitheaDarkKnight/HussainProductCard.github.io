@@ -1,0 +1,45 @@
+@media(max-width: 768px){
+
+    p{
+        font-size: 14px;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    .menu{
+        .case{
+            display: flex;
+            flex-direction: column;
+            // > img{
+            //     width: 200px;
+            //     margin-bottom: -170px;
+            //     margin-top: -110px;
+            // }
+            > img{
+                width: 350px;
+                border-radius: 10px 10px 0 0;
+            }
+            .desktop{
+                display: none;
+            }
+            .mobile{
+                display: inline;
+            }
+            .menu-text{
+                border-radius: 0 0 10px 10px;
+                padding: 25px 25px;
+                height: 380px;
+                width: 350px;
+                h3{
+                    margin: 10px 0;
+                }
+                .desc{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+

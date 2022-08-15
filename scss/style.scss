@@ -1,0 +1,106 @@
+@import 'utilities';
+@import 'functions';
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+// Colors
+
+$main-color: hsl(30, 38%, 92%);
+$menu-color:hsl(0, 0%, 100%);
+$menu-text-color:hsl(228, 12%, 48%);
+$cart-color: #3d8168;
+$hover-color: #1a4031;
+$fraunces: 'Fraunces', serif;
+
+
+// Styles
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $main-color;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+    font-size: 42px;
+    margin: 30px 0;
+    line-height: 1;
+    font-family: $fraunces;
+}
+
+p{
+    line-height: 1.6;
+    color: $menu-text-color;
+    font-size: 14;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu{
+
+    .case{
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .desktop{
+            width: 400px;
+            border-radius: 10px 0 0 10px;
+        }
+        .mobile{
+            display: none;
+        }
+        .menu-text{
+            @include set-background($menu-color);
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 600px;
+            padding: 40px 45px;
+            border-radius: 0 10px 10px 0;
+
+            .desc{
+                font-size: 18px;
+            }
+
+            .price{
+                display: flex;
+                margin: 15px 0;
+                h3{
+                    color: $cart-color;
+                }
+                p{
+                    align-self: center;
+                    margin-left: 25px;
+                    text-decoration: line-through;
+                }
+            }
+
+            .btn{
+                cursor: pointer;
+                display: inline-block;
+                @include set-background($cart-color);
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 19px;
+                > img{
+                    margin-right: 15px;
+                }
+                &:hover{
+                    background-color: $hover-color;
+                }
+            }
+        }
+    }
+}
+
+@import 'mobile';

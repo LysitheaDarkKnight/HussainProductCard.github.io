@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.letter-spacing-5 {
+  letter-spacing: 5px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(30deg, 38%, 92%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-size: 42px;
+  margin: 30px 0;
+  line-height: 1;
+  font-family: "Fraunces", serif;
+}
+
+p {
+  line-height: 1.6;
+  color: hsl(228deg, 12%, 48%);
+  font-size: 14;
+  font-family: "Montserrat", sans-serif;
+}
+
+.menu .case {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .case .desktop {
+  width: 400px;
+  border-radius: 10px 0 0 10px;
+}
+.menu .case .mobile {
+  display: none;
+}
+.menu .case .menu-text {
+  background-color: hsl(0deg, 0%, 100%);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+  padding: 40px 45px;
+  border-radius: 0 10px 10px 0;
+}
+.menu .case .menu-text .desc {
+  font-size: 18px;
+}
+.menu .case .menu-text .price {
+  display: flex;
+  margin: 15px 0;
+}
+.menu .case .menu-text .price h3 {
+  color: #3d8168;
+}
+.menu .case .menu-text .price p {
+  align-self: center;
+  margin-left: 25px;
+  text-decoration: line-through;
+}
+.menu .case .menu-text .btn {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #3d8168;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 19px;
+}
+.menu .case .menu-text .btn > img {
+  margin-right: 15px;
+}
+.menu .case .menu-text .btn:hover {
+  background-color: #1a4031;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .menu .case {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu .case > img {
+    width: 350px;
+    border-radius: 10px 10px 0 0;
+  }
+  .menu .case .desktop {
+    display: none;
+  }
+  .menu .case .mobile {
+    display: inline;
+  }
+  .menu .case .menu-text {
+    border-radius: 0 0 10px 10px;
+    padding: 25px 25px;
+    height: 380px;
+    width: 350px;
+  }
+  .menu .case .menu-text h3 {
+    margin: 10px 0;
+  }
+  .menu .case .menu-text .desc {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=style.css.map */
